@@ -4,6 +4,9 @@ createApp({
     data() {
         return {
            activeImage: 0,
+           prova: {
+            saluto: "ciao"
+           },
 
         slides: [{
             image: 'img/01.webp',
