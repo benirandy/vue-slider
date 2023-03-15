@@ -31,5 +31,21 @@ createApp({
             }]
 
         }
+    },
+    methods: {
+        
+        goPrev() {
+            this.activeImage--;
+            if (this.activeImage < 0) {
+                this.activeImage = this.slides.length -1;
+            }
+        },
+        goNext() {
+            this.activeImage++;
+            if (this.activeImage == slides.length) {
+                this.activeImage = 0;
+            }
+
+        }
     }
-}).mount('#app')
+}).mount('#app') 
