@@ -13,69 +13,30 @@
     </head>
 
     <body>
-
-        <main>
-            <div id="app">
-
-
-                <div class="container">
-                    <div class="slider-wrapper">
-                        <div class="item"> <img :src="slides[activeImage ].image" alt="Spider-man">
-                            <div class="text">
-                                <h2>Spiderman</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo id eius, soluta
-                                    nisi
-                                    similique est molestias nostrum! Aspernatur, amet deserunt. Fugiat soluta ipsam
-                                    explicabo perspiciatis hic sequi est quasi ratione.</p>
-                            </div>
+        <div id="app">
+            <div class="container">
+                <div class="slider-wrapper">
+                    <div class="item"> <img :src="slides[activeImage ].image" alt="Spider-man">
+                        <div class="text">
+                            <h2>Spiderman</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo id eius, soluta
+                                nisi
+                                similique est molestias nostrum! Aspernatur, amet deserunt. Fugiat soluta ipsam
+                                explicabo perspiciatis hic sequi est quasi ratione.
+                            </p>
                         </div>
-
-                        <div class="navigator">
-                            <div @click="goPrev" class="arrow icone next"><i class="fa-solid fa chevron-left"></i></div>
-                            <div @click="goNext" class="arrow icone prev"><i class="fa-solid fa chevron-right"></i>
-                            </div>
-                        </div>
-
-                        <div class="thumbnails">
-                            <img v-for="image in slides" :src="image" class="thumb" class="active"
-                            
-                            <div
-                                class="thumbnails">
-                            <img src="img/01.webp" class="thumb" class="active" alt="">
-                            <img src="img/02.webp" class="thumb" class="active" alt="">
-                            <img src="img/03.webp" class="thumb" class="active" alt="">
-                            <img src="img/04.webp" class="thumb" class="active" alt="">
-                            <img src="img/05.webp" class="thumb" class="active" alt="">
-                        </div>
-
-
-
-
-
-
-
-
                     </div>
 
+                    <div class="navigator">
+                        <div @click="goPrev" class="arrow icone next"><i class="fa-solid fa chevron-left"></i></div>
+                        <div @click="goNext" class="arrow icone prev"><i class="fa-solid fa chevron-right"></i>
+                        </div>
+                    </div>
 
-
-
-
-
-
+                    <div class="thumbnails">
+                        <img v-for="image in slides" :src="image" class="thumb" class="active" 
+                    </div>
                 </div>
-
-
-            </div>
-
-        </main>
-
-
-
-
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-
     </body>
 
 </html>
