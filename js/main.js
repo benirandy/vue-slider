@@ -3,13 +3,13 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-           activeImage: 0,
-           prova: {
-            saluto: "ciao"
-           },
+            activeImage: 0,
+            prova: {
+                saluto: "ciao"
+            },
 
-        slides: [{
-            image: 'img/01.webp',
+            slides: [{
+                image: 'img/01.webp',
                 title: 'Marvel\'s Spiderman Miles Morale',
                 text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
             }, {
@@ -33,11 +33,11 @@ createApp({
         }
     },
     methods: {
-        
+
         goPrev() {
             this.activeImage--;
             if (this.activeImage < 0) {
-                this.activeImage = this.slides.length -1;
+                this.activeImage = this.slides.length - 1;
             }
         },
         goNext() {

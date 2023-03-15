@@ -5,49 +5,67 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vue</title>
+        <title>Document</title>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     </head>
 
     <body>
 
 
         <div id="app">
-            <div class="container">
-                <div class="slider-wrapper">
-                    <div class="item"> <img :src="slides[activeImage ].image" alt="Spider-man">
-                        <div class="text">
-                            <h2>Spiderman</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo id eius, soluta
-                                nisi
-                                similique est molestias nostrum! Aspernatur, amet deserunt. Fugiat soluta ipsam
-                                explicabo perspiciatis hic sequi est quasi ratione.
-                            </p>
+
+            <main>
+                <div class="container">
+                    <div class="slider-wrapper">
+                        <div class="item">
+                            <img :src="slides [activeImage].image" alt="Spider-man">
+                            <div class="text">
+                                <h2>Spiderman</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo id eius, soluta
+                                    nisi
+                                    similique est molestias nostrum! Aspernatur, amet deserunt. Fugiat soluta ipsam
+                                    explicabo perspiciatis hic sequi est quasi ratione.
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="navigator">
-                        <div @click="goPrev" class="arrow icone next"><i class="fa-solid fa chevron-left"></i></div>
-                        <div @click="goNext" class="arrow icone prev"><i class="fa-solid fa chevron-right"></i>
+
+                        <div class="navigator">
+                            <div @click="goPrev" class="arrow icone next"><i class="fa-solid fa chevron-left"></i></div>
+                            <div @click="goNext" class="arrow icone prev"><i class="fa-solid fa chevron-right"></i>
+                            </div>
                         </div>
+                        <!-- <div class="thumbnails">
+                            <img v-for="(image, index)image in slides" :src="image" class="thumb" class="active">
+                        </div>-->
+
+
+
+
+                        <div class="thumbnails">
+                            <img src="img/01.webp" class="thumb" class="active" alt="">
+                            <img src="img/02.webp" class="thumb" class="active" alt="">
+                            <img src="img/03.webp" class="thumb" class="active" alt="">
+                            <img src="img/04.webp" class="thumb" class="active" alt="">
+                            <img src="img/05.webp" class="thumb" class="active" alt="">
+                        </div>
+
                     </div>
-
-
-                    <div class="thumbnails">
-                        <img src="img/01.webp" class="thumb" class="active" alt="">
-                        <img src="img/02.webp" class="thumb" class="active" alt="">
-                        <img src="img/03.webp" class="thumb" class="active" alt="">
-                        <img src="img/04.webp" class="thumb" class="active" alt="">
-                        <img src="img/05.webp" class="thumb" class="active" alt="">
-
-                    </div>
-
                 </div>
-            </div>
+
+            </main>
+
         </div>
+
+
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+
+
+
     </body>
 
 </html>
