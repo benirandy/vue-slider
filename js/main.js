@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            time: null,
             activeImage: 0,
             prova: {
                 saluto: "ciao"
@@ -42,10 +43,24 @@ createApp({
         },
         goNext() {
             this.activeImage++;
-            if (this.activeImage == slides.length) {
+            if (this.activeImage == this.slides.length) {
                 this.activeImage = 0;
             }
 
+        },
+        goSlide(index) {
+            this.activeImage = index;
+        },
+        autoplay(){
+           this.time = setInterval(this.goNext, 3000);
+        },
+        altAutoplay(){
+            clearInterval(this.time);
+            this.time = null;
         }
+    },
+    mounted(){
+        this.autoplay();
     }
+
 }).mount('#app') 
